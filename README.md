@@ -43,22 +43,19 @@ streamlit run audio_ops.py
 
 ### Tabs and Functionalities
 - **Text-to-Speech Synthesis**
-
    -Enter the text you want to convert to speech.
    -Select a voice type from the provided options.
    -Click the "Ses Sentezle" button to generate and play the speech.
   
--**Transcription with Whisper**
+- **Transcription with Whisper**
    -Upload an audio file in MP3 format.
    -Click the "Metne Dönüştür" button to transcribe the audio to text.
    
--**Translation with Whisper**
-
+- **Translation with Whisper**
    -Upload an audio file in MP3 format.
    -Click the "Tercüme Et" button to translate the audio to text in another language.
 
--**Transcription with Conformer**
-
+- **Transcription with Conformer**
    -Upload an audio file in MP3 format.
    -Click the "Metne Dönüştür" button to transcribe the audio using the Conformer model.
 
