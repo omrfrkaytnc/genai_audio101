@@ -70,4 +70,75 @@ OpenAI for their powerful AI models.
 AssemblyAI for their advanced transcription services.
 Streamlit for providing an easy-to-use web application framework.
   
+---
 
+# genai_audio101
+
+genai_audio101, OpenAI ve AssemblyAI'yi kullanarak çeşitli ses işlemleri gerçekleştiren çok yönlü bir Streamlit uygulamasıdır.
+Bu proje, bu işlevleri sezgisel bir web arayüzüne entegre ederek ses dosyalarını işlemenizi ve metinden konuşma oluşturmanızı kolaylaştırır.
+
+## Özellikler
+
+- **Metinden Konuşma Sentezleme (TTS)**
+  - Girilen metni OpenAI'nin TTS-1 modeli kullanarak konuşmaya dönüştürür.
+  - alloy, echo, fable, onyx, nova ve shimmer gibi birden fazla ses türünü destekler.
+
+- **Whisper ile Transkripsiyon**
+  - Ses dosyalarını OpenAI'nin Whisper modeli kullanarak metne dönüştürür.
+  - Türkçe dilinde transkripsiyonu destekler.
+
+- **Whisper ile Çeviri**
+  - Ses dosyalarını OpenAI'nin Whisper modeli kullanarak başka bir dilde metne çevirir.
+
+- **Conformer ile Transkripsiyon**
+  - Ses dosyalarını AssemblyAI'nin Conformer modeli kullanarak metne dönüştürür.
+
+## Kurulum
+
+genai_audio101 ile çalışmaya başlamak için gerekli bağımlılıkları yüklemeniz gerekmektedir. Bunu şu komutla yapabilirsiniz:
+
+```bash
+pip install -r requirements.txt
+```
+
+Aşağıdaki ortam değişkenlerinin .env dosyasında ayarlandığından emin olun:
+
+```env
+openai_apikey=your_openai_api_key
+assemblyai_apikey=your_assemblyai_api_key
+```
+
+## Kullanımı
+Streamlit uygulamasını şu komutla çalıştırın:
+```bash
+streamlit run audio_ops.py
+```
+
+### Sekmeler ve İşlevsellikler
+- **Metinden Konuşma Sentezleme**
+  - Konuşmaya dönüştürmek istediğiniz metni girin.
+  - Sağlanan seçeneklerden bir ses türü seçin.
+  - Konuşmayı oluşturmak ve oynatmak için "Ses Sentezle" butonuna tıklayın.
+  
+- **Whisper ile transkripsiyon**
+  - Upload an audio file in MP3 format.
+  - Sesi metne dönüştürmek için "Metne Dönüştür" butonuna tıklayın.
+   
+- **Translation with Whisper**
+  - MP3 formatında bir ses dosyası yükleyin.
+  - Sesi başka bir dilde metne çevirmek için "Tercüme Et" butonuna tıklayın.
+
+- **Transcription with Conformer**
+  - MP3 formatında bir ses dosyası yükleyin.
+  - Sesi Conformer modeli kullanarak metne dönüştürmek için "Metne Dönüştür" butonuna tıklayın.
+
+## Katkıda Bulunma
+Katkılar memnuniyetle karşılanır! Herhangi bir öneriniz veya geliştirme fikriniz varsa, lütfen bir pull request gönderin veya bir sorun açın.
+
+## Lisans
+Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına bakın.
+
+## Teşekkürler
+Güçlü yapay zeka modelleri için OpenAI.
+Gelişmiş transkripsiyon hizmetleri için AssemblyAI.
+Kullanımı kolay web uygulama çerçevesi sağladığı için Streamlit.
